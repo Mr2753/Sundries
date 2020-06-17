@@ -1,0 +1,99 @@
+“百度为例”
+#  浏览器抓包
+# '''response cookies'''
+# Set-Cookie: BDSVRTM=0; path=/
+# Set-Cookie: BD_HOME=1; path=/
+# Set-Cookie: H_PS_PSSID=30962_1460_21087_30995_30823_30717; path=/; domain=.baidu.com
+
+# '''requests cookies'''
+# Cookie: PSTM=1583923785; BAIDUID=BE878247945A1CF9A621FC246D02F526:FG=1;
+# BIDUPSID=B2AC4A7753643D1CE4320B85E73C26C3; BD_UPN=12314753;
+# BDORZ=FFFB88E999055A3F8A630C64834BD6D0;
+# yjs_js_security_passport=dfb986b25d3114ddade72983947c4e177ad56b1c_1583933818_js; BD_HOME=1;
+# H_PS_PSSID=30962_1460_21087_30995_30823_30717
+
+# '''代码请求得到 cookies'''
+
+# <RequestsCookieJar[<Cookie BAIDUID=D781DD243804D405572D29F06D80E17F:FG=1 for .baidu.com/>,
+# <Cookie BIDUPSID=D781DD243804D4056D8D38F242B0ACC5 for .baidu.com/>,
+# <Cookie H_PS_PSSID=30975_1469_21099_30824_30717 for .baidu.com/>,
+# <Cookie PSTM=1583981657 for .baidu.com/>,
+
+# <Cookie BDSVRTM=0 for www.baidu.com/>,
+# <Cookie BD_HOME=1 for www.baidu.com/>]>
+
+# '''请求得到的response headers'''
+# {'Bdpagetype': '1',
+#  'Bdqid': '0xba4d44b500025aac',
+#  'Cache-Control': 'private',
+#  'Connection': 'keep-alive',
+#  'Content-Encoding': 'gzip',
+#  'Content-Type': 'text/html',
+#  'Cxy_all': 'baidu+4d89a28d5abe3833bf95b8a89a132311',
+#  'Date': 'Thu, 12 Mar 2020 03:01:28 GMT',
+#  'Expires': 'Thu, 12 Mar 2020 03:00:51 GMT',
+#  'P3p': 'CP=" OTI DSP COR IVA OUR IND COM ", CP=" OTI DSP COR IVA OUR IND COM "',
+#  'Server': 'BWS/1.1',
+#  'Set-Cookie': 'BAIDUID=DC53803BA89F02CEED749543CFA126A9:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, BIDUPSID=DC53803BA89F02CEED749543CFA126A9; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, PSTM=1583982088; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, BAIDUID=DC53803BA89F02CE033771906FFD84FA:FG=1; max-age=31536000; expires=Fri, 12-Mar-21 03:01:28 GMT; domain=.baidu.com; path=/; version=1; comment=bd, delPer=0; path=/; domain=.baidu.com, BDSVRTM=0; path=/, BD_HOME=0; path=/, H_PS_PSSID=30962_1430_21116_30823_26350_22158; path=/; domain=.baidu.com', 'Strict-Transport-Security': 'max-age=172800', 'Traceid': '1583982088070749261813424461608441240236', 'Vary': 'Accept-Encoding',
+# 'X-Ua-Compatible':'IE=Edge,chrome=1',
+# 'Transfer-Encoding': 'chunked'}
+
+# '''抓包获得的response headers'''
+# Bdpagetype: 1
+# Bdqid: 0xdcf24727000196d1
+# Cache-Control: private
+# Connection: keep-alive
+# Content-Encoding: gzip
+# Content-Security-Policy: upgrade-insecure-requests
+# Content-Type: text/html;charset=utf-8
+# Date: Thu, 12 Mar 2020 02:56:00 GMT
+# Expires: Thu, 12 Mar 2020 02:55:01 GMT
+# Server: BWS/1.1
+# Set-Cookie: BDSVRTM=0; path=/
+# Set-Cookie: BD_HOME=1; path=/
+# Set-Cookie: H_PS_PSSID=30962_1460_21087_30995_30823_30717; path=/; domain=.baidu.com
+# Strict-Transport-Security: max-age=172800
+# Traceid: 1583981760025489869815920865865537525457
+# Transfer-Encoding: chunked
+# X-Ua-Compatible: IE=Edge,chrome=1
+
+
+
+
+# response cookies:
+# <RequestsCookieJar[<Cookie BAIDUID=DA57BAF2EB80BD3205C24FB95E739B5E:FG=1 for .baidu.com/>,
+# <Cookie BIDUPSID=DA57BAF2EB80BD3222131E8021BEF596 for .baidu.com/>,
+# <Cookie H_PS_PSSID=30962_1434_21079_30840_30823_30717 for .baidu.com/>,
+# <Cookie PSTM=1583984285 for .baidu.com/>,
+# <Cookie BDSVRTM=0 for www.baidu.com/>,
+# <Cookie BD_HOME=1 for www.baidu.com/>]>
+#
+# response headers：
+# {'Bdpagetype': '1',
+# 'Bdqid': '0xdf2e1f1f000299a0',
+# 'Cache-Control': 'private',
+# 'Connection': 'Keep-Alive',
+# 'Content-Encoding': 'gzip',
+# 'Content-Type': 'text/html',
+# 'Cxy_all': 'baidu+1a52035531979ba30ba3262ed0478dbc',
+# 'Date': 'Thu, 12 Mar 2020 03:40:20 GMT',
+# 'Expires': 'Thu, 12 Mar 2020 03:39:59 GMT',
+# 'P3p': 'CP=" OTI DSP COR IVA OUR IND COM ",
+# CP=" OTI DSP COR IVA OUR IND COM "',
+# 'Server': 'BWS/1.1',
+# 'Set-Cookie': 'BAIDUID=EFAA9F96BF4659405AC7DB8DC53AA24D:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, BIDUPSID=EFAA9F96BF4659405AC7DB8DC53AA24D; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, PSTM=1583984420; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2147483647; path=/; domain=.baidu.com, BAIDUID=EFAA9F96BF465940BC8C980D5FC69C02:FG=1; max-age=31536000; expires=Fri, 12-Mar-21 03:40:20 GMT; domain=.baidu.com; path=/; version=1; comment=bd, delPer=0; path=/; domain=.baidu.com, BDSVRTM=0; path=/, BD_HOME=0; path=/, H_PS_PSSID=30974_1436_21103_30998_30823_28701; path=/; domain=.baidu.com',
+# 'Traceid': '1583984420023818932216081825537391237536',
+# 'Vary': 'Accept-Encoding',
+# 'X-Ua-Compatible': 'IE=Edge,chrome=1',
+# 'Transfer-Encoding': 'chunked'}
+
+# 总结：session维持会话（eg: 好比打开的为同个浏览器）
+
+# s = requests.Session()
+# s.get('URL')
+# r = s.get()
+
+# with requests.Session() as s:
+#     s.get('http://www.baidu.com', headers=header) 使用with 上下文管理器 维持会话
+#     r = s.get('http://www.baidu.com', headers=header)
+#     print(r.request.headers['Cookie'])
