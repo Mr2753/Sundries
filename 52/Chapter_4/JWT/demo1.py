@@ -30,5 +30,5 @@ def getToken(agrs: List[Any]):
 agrs = ['/api/movie']
 token = getToken(agrs)
 print(token)
-# response = requests.get(INDEX_URL.format(offset=OFFSET, token=token))
-# print(response.json())
+response = requests.get(INDEX_URL.format(offset=OFFSET, token=token))
+print(response.json())

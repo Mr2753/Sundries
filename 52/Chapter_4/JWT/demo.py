@@ -4,11 +4,14 @@
 # @File     :   demo.py
 # @Software :   PyCharm
 import hashlib
+import io
+import sys
 import requests
 import base64
 from typing import List, Any
 import time
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gb18030')
 INDEX_URL = 'https://dynamic6.scrape.cuiqingcai.com/api/movie/?limit=10&offset={offset}&token={token}'
 OFFSET = 10
 
@@ -24,6 +27,6 @@ def getToken1(agrs: List[Any]) -> List:
 
 agrs = ['/api/movie']
 token = getToken1(agrs)
-print(token)
-# response = requests.get(INDEX_URL.format(offset=OFFSET, token=token))
-# print(response.json())
+# print(token)
+response = requests.get(INDEX_URL.format(offset=OFFSET, token=token))
+print(response.json())

@@ -42,5 +42,5 @@ for item in result['results']:
     print('Token:', token)
     detail_url = DETAIL_URL.format(id=encrypt_id, token=token)
     print('detail_url:', detail_url)
-    # response = requests.get(detail_url)
-    # print('response', response.json())
+    response = requests.get(detail_url)
+    print('response', response.json())
